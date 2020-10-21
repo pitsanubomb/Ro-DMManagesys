@@ -1,4 +1,4 @@
-# romanage-client
+# frontend
 
 ## Project setup
 ```
