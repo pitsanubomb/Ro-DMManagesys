@@ -17,7 +17,7 @@
           html-type="submit"
           :disabled="formInline.user === '' || formInline.password === ''"
         >
-          Log in {{ msg }}
+          Submit
         </a-button>
       </a-form-item>
     </a-form>
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log(this.formInline);
+      this.$emit('submit', this.formInline);
     },
   },
 };
