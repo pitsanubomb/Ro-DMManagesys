@@ -1,17 +1,19 @@
 <template>
-<div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-</div>
+  <div>
+    <a-tabs tab-position="left">
+      <a-tab-pane key="1" tab="Login">
+        <loginUI />
+      </a-tab-pane>
+      <a-tab-pane key="3" tab="Register">
+        <loginUI />
+      </a-tab-pane>
+    </a-tabs>
+  </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import loginUI from '@/components/authen/LoginFrom.vue';
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
-  },
+  components: { loginUI },
 };
 </script>
