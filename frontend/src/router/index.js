@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import fire from 'firebase/app';
 import Login from '../views/Login.vue';
+import mainUi from '../components/layout/defaultLayout.vue';
 
 const routes = [
   {
@@ -11,16 +12,21 @@ const routes = [
       isGuest: true,
     },
   },
+  { path: '/', redirect: '/main' },
   {
-    path: '/',
-    name: 'Main',
+    path: '/main',
+    name: 'main',
     meta: {
       isAuthen: true,
     },
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Main.vue'),
+    component: mainUi,
+    children: [
+      {
+        path: '',
+        name: 'main',
+        component: () => import('../views/Main.vue'),
+      },
+    ],
   },
 ];
 
