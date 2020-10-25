@@ -1,12 +1,8 @@
 import { createStore } from 'vuex';
+import fireAuthModule from './fireAuth';
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    fireAuth: fireAuthModule,
   },
 });
