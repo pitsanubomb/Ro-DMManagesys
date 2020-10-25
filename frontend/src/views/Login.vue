@@ -1,5 +1,5 @@
 <template>
-  <div style="padding:10%">
+  <div style="padding:20%">
     <fireUiLogin />
   </div>
 </template>
